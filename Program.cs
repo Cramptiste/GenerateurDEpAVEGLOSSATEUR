@@ -18,14 +18,14 @@ namespace GenerateurDePaveGlossateur
         }
         public void Afficher()
         {
-            foreach(Phrase phrase in Phrases)
+            foreach (Phrase phrase in Phrases)
             {
-                
+
                 foreach (var gp in phrase.GroupeNominal)
                 {
-                    Console.Write(gp.texte);
+                    Console.Write(gp.texte.ToLower());
                 }
-                
+
             }
         }
     }
@@ -37,7 +37,7 @@ namespace GenerateurDePaveGlossateur
             this.GroupeNominal = GroupeNominal;
         }
     }
-    public class  GroupeNominal
+    public class GroupeNominal
     {
         public string texte = "";
         public GroupeNominal(string texte)
@@ -46,7 +46,7 @@ namespace GenerateurDePaveGlossateur
             texte = texte.ToLower();
         }
     }
-    
+
     class Program
     {
         static void Generer(bool sticker = false)
@@ -132,37 +132,37 @@ namespace GenerateurDePaveGlossateur
                 phrases = new List<Phrase>()
                 {
                     new Phrase(new List<GroupeNominal> {
-                        new GroupeNominal( p1gp1[rand.Next(0, p1gp1.Count)].ToLower()),
-                        new GroupeNominal(p1gp2[rand.Next(0, p1gp2.Count)].ToLower()),
-                        new GroupeNominal(p1gp3[rand.Next(0, p1gp3.Count)] + stickers[rand.Next(0, stickers.Count)] +"\n\n".ToLower())
+                        new GroupeNominal( p1gp1[rand.Next(0, p1gp1.Count)]),
+                        new GroupeNominal(p1gp2[rand.Next(0, p1gp2.Count)]),
+                        new GroupeNominal(p1gp3[rand.Next(0, p1gp3.Count)] + stickers[rand.Next(0, stickers.Count)] +"\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
-                    { new GroupeNominal( p2gp1[rand.Next(0, p2gp1.Count)].ToLower() ),
-                        new GroupeNominal(p2gp2[rand.Next(0, p2gp2.Count)].ToLower()),
-                        new GroupeNominal(p2gp3[rand.Next(0, p2gp3.Count)].ToLower()),
-                        new GroupeNominal(p2gp4[rand.Next(0, p2gp4.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n".ToLower())
-                    }),
-                    new Phrase(new List<GroupeNominal>
-                    {
-                        new GroupeNominal( p3gp1[rand.Next(0, p3gp1.Count)].ToLower() ),
-                        new GroupeNominal(p3gp2[rand.Next(0, p3gp2.Count)].ToLower()),
-                        new GroupeNominal(p3gp3[rand.Next(0, p3gp3.Count)].ToLower()),
-                        new GroupeNominal(p3gp4[rand.Next(0, p3gp4.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n".ToLower())
+                    { new GroupeNominal( p2gp1[rand.Next(0, p2gp1.Count)]),
+                        new GroupeNominal(p2gp2[rand.Next(0, p2gp2.Count)]),
+                        new GroupeNominal(p2gp3[rand.Next(0, p2gp3.Count)]),
+                        new GroupeNominal(p2gp4[rand.Next(0, p2gp4.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
                     {
-                        new GroupeNominal( p4gp1[rand.Next(0, p4gp1.Count)].ToLower()),
-                        new GroupeNominal(p4gp2[rand.Next(0, p4gp2.Count)].ToLower()),
-                        new GroupeNominal(p4gp3[rand.Next(0, p4gp3.Count)].ToLower()),
-                        new GroupeNominal(p4gp4[rand.Next(0, p4gp4.Count)].ToLower()),
-                        new GroupeNominal(p4gp5[rand.Next(0, p4gp5.Count)].ToLower()),
-                        new GroupeNominal(p4gp6[rand.Next(0, p4gp6.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n".ToLower())
+                        new GroupeNominal(p3gp1[rand.Next(0, p3gp1.Count)]),
+                        new GroupeNominal(p3gp2[rand.Next(0, p3gp2.Count)]),
+                        new GroupeNominal(p3gp3[rand.Next(0, p3gp3.Count)]),
+                        new GroupeNominal(p3gp4[rand.Next(0, p3gp4.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
                     {
-                        new GroupeNominal( p5gp1[rand.Next(0, p5gp1.Count)].ToLower()),
-                        new GroupeNominal(p5gp2[rand.Next(0, p5gp2.Count)].ToLower()),
-                        new GroupeNominal(p5gp3[rand.Next(0, p5gp3.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n".ToLower()),
+                        new GroupeNominal( p4gp1[rand.Next(0, p4gp1.Count)]),
+                        new GroupeNominal(p4gp2[rand.Next(0, p4gp2.Count)]),
+                        new GroupeNominal(p4gp3[rand.Next(0, p4gp3.Count)]),
+                        new GroupeNominal(p4gp4[rand.Next(0, p4gp4.Count)]),
+                        new GroupeNominal(p4gp5[rand.Next(0, p4gp5.Count)]),
+                        new GroupeNominal(p4gp6[rand.Next(0, p4gp6.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n")
+                    }),
+                    new Phrase(new List<GroupeNominal>
+                    {
+                        new GroupeNominal( p5gp1[rand.Next(0, p5gp1.Count)]),
+                        new GroupeNominal(p5gp2[rand.Next(0, p5gp2.Count)]),
+                        new GroupeNominal(p5gp3[rand.Next(0, p5gp3.Count)] + stickers[rand.Next(0, stickers.Count)] + "\n\n"),
                     })
                 };
             }
@@ -171,41 +171,41 @@ namespace GenerateurDePaveGlossateur
                 phrases = new List<Phrase>()
                 {
                     new Phrase(new List<GroupeNominal> {
-                        new GroupeNominal( p1gp1[rand.Next(0, p1gp1.Count)].ToLower()),
-                        new GroupeNominal(p1gp2[rand.Next(0, p1gp2.Count)].ToLower()),
-                        new GroupeNominal(p1gp3[rand.Next(0, p1gp3.Count)] +"\n\n".ToLower())
+                        new GroupeNominal( p1gp1[rand.Next(0, p1gp1.Count)]),
+                        new GroupeNominal(p1gp2[rand.Next(0, p1gp2.Count)]),
+                        new GroupeNominal(p1gp3[rand.Next(0, p1gp3.Count)] +"\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
-                    { new GroupeNominal( p2gp1[rand.Next(0, p2gp1.Count)].ToLower() ),
-                        new GroupeNominal(p2gp2[rand.Next(0, p2gp2.Count)].ToLower()),
-                        new GroupeNominal(p2gp3[rand.Next(0, p2gp3.Count)].ToLower()),
-                        new GroupeNominal(p2gp4[rand.Next(0, p2gp4.Count)] + "\n\n".ToLower())
-                    }),
-                    new Phrase(new List<GroupeNominal>
-                    {
-                        new GroupeNominal( p3gp1[rand.Next(0, p3gp1.Count)].ToLower() ),
-                        new GroupeNominal(p3gp2[rand.Next(0, p3gp2.Count)].ToLower()),
-                        new GroupeNominal(p3gp3[rand.Next(0, p3gp3.Count)].ToLower()),
-                        new GroupeNominal(p3gp4[rand.Next(0, p3gp4.Count)] + "\n\n".ToLower())
+                    { new GroupeNominal( p2gp1[rand.Next(0, p2gp1.Count)]),
+                        new GroupeNominal(p2gp2[rand.Next(0, p2gp2.Count)]),
+                        new GroupeNominal(p2gp3[rand.Next(0, p2gp3.Count)]),
+                        new GroupeNominal(p2gp4[rand.Next(0, p2gp4.Count)] + "\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
                     {
-                        new GroupeNominal( p4gp1[rand.Next(0, p4gp1.Count)].ToLower()),
-                        new GroupeNominal(p4gp2[rand.Next(0, p4gp2.Count)].ToLower()),
-                        new GroupeNominal(p4gp3[rand.Next(0, p4gp3.Count)].ToLower()),
-                        new GroupeNominal(p4gp4[rand.Next(0, p4gp4.Count)].ToLower()),
-                        new GroupeNominal(p4gp5[rand.Next(0, p4gp5.Count)].ToLower()),
-                        new GroupeNominal(p4gp6[rand.Next(0, p4gp6.Count)] + "\n\n".ToLower())
+                        new GroupeNominal( p3gp1[rand.Next(0, p3gp1.Count)]),
+                        new GroupeNominal(p3gp2[rand.Next(0, p3gp2.Count)]),
+                        new GroupeNominal(p3gp3[rand.Next(0, p3gp3.Count)]),
+                        new GroupeNominal(p3gp4[rand.Next(0, p3gp4.Count)] + "\n\n")
                     }),
                     new Phrase(new List<GroupeNominal>
                     {
-                        new GroupeNominal( p5gp1[rand.Next(0, p5gp1.Count)].ToLower()),
-                        new GroupeNominal(p5gp2[rand.Next(0, p5gp2.Count)].ToLower()),
-                        new GroupeNominal(p5gp3[rand.Next(0, p5gp3.Count)] + "\n\n".ToLower()),
+                        new GroupeNominal( p4gp1[rand.Next(0, p4gp1.Count)]),
+                        new GroupeNominal(p4gp2[rand.Next(0, p4gp2.Count)]),
+                        new GroupeNominal(p4gp3[rand.Next(0, p4gp3.Count)]),
+                        new GroupeNominal(p4gp4[rand.Next(0, p4gp4.Count)]),
+                        new GroupeNominal(p4gp5[rand.Next(0, p4gp5.Count)]),
+                        new GroupeNominal(p4gp6[rand.Next(0, p4gp6.Count)] + "\n\n")
+                    }),
+                    new Phrase(new List<GroupeNominal>
+                    {
+                        new GroupeNominal( p5gp1[rand.Next(0, p5gp1.Count)]),
+                        new GroupeNominal(p5gp2[rand.Next(0, p5gp2.Count)]),
+                        new GroupeNominal(p5gp3[rand.Next(0, p5gp3.Count)] + "\n\n"),
                     })
                 };
             }
-            
+
             var pave = new Pave(phrases);
             pave.Afficher();
         }
@@ -220,4 +220,3 @@ namespace GenerateurDePaveGlossateur
         }
     }
 }
-
