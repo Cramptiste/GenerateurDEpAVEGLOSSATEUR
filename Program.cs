@@ -58,12 +58,12 @@ namespace GenerateurDePaveGlossateur
                 nb gp dans quatrième p^hrase : 6
                 nb gp dans cinquième phrase : 3
                  */
-            var filename1 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\phrase1\\";
-            var filename2 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\phrase2\\";
-            var filename3 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\phrase3\\";
-            var filename4 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\phrase4\\";
-            var filename5 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\phrase5\\";
-            var filename6 = "C:\\Users\\amrou\\source\\repos\\GenerateurDePaveGlossateur\\stickers\\";
+            var filename1 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\phrase1\\";
+            var filename2 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\phrase2\\";
+            var filename3 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\phrase3\\";
+            var filename4 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\phrase4\\";
+            var filename5 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\phrase5\\";
+            var filename6 = "C:\\Users\\YourName\\source\\repos\\GenerateurDePaveGlossateur\\stickers\\";
             Random rand = new Random();
 
             string[] stickersArray = File.ReadAllLines(filename6 + "stickers.txt");
